@@ -9,6 +9,8 @@ function App() {
   var moye = new Audio("moye.mp3");
 
 
+
+
   const hanldleThalaReaction = () => {
     setQuery("")
     thala.pause()
@@ -21,6 +23,7 @@ function App() {
 
     if (isNaN(n)) {
       sum = n.length
+
     } else {
       while (n != 0) {
         sum = sum + (n % 10);
@@ -33,16 +36,17 @@ function App() {
 
     if (sum === 7) {
       // alert("Thala for a reason")
-      document.getElementById("thala-reaction").innerHTML = ` <video width="auto" height="auto" autoPlay muted loop>
-      <source src="thala.mp4" type="video/mp4" />
-    </video> `
+
+      document.getElementById("thala-reaction").innerHTML = ` <video width="200" height="200" autoPlay muted loop>
+        <source src="thala.mp4" type="video/mp4" />
+      </video> `
 
       document.getElementById("thala-trigger").click()
       thala.play()
     }
     else {
 
-      document.getElementById("thala-reaction").innerHTML = `  <img src="https://reactiongifs.me/cdn-cgi/imagedelivery/S36QsAbHn6yI9seDZ7V8aA/885eebac-8987-476d-6941-8a2acdf7c000/w=398" alt="" />
+      document.getElementById("thala-reaction").innerHTML = ` <img src="moye.gif" alt="" />
               `
 
 
@@ -52,12 +56,15 @@ function App() {
     }
 
 
+    arr.map((item) => console.log(item))
+
   }
 
 
   return (
 
     <div className="main-box">
+
 
 
 
@@ -82,6 +89,7 @@ function App() {
 
 
 
+
             </div>
 
           </div>
@@ -96,11 +104,16 @@ function App() {
         <button className="thala-review-btn" disabled={query.length === 0 ? true : false} onClick={checkThala} >Check</button>
 
 
+
       </div>
-      <a href="whatsapp://send?text=This is Thala Review System APP. Just for Fun!!" data-action="share/whatsapp/share"
+      <a href="whatsapp://send?text= https://thala-review-system.onrender.com/   This is Thala Review System APP. Just for Fun!! " data-action="share/whatsapp/share"
         target="_blank"> Share on WhatsApp </a>
       <div className="footer">
         Created with <span> ❤️</span> by <strong>Mridul</strong>
+        <div style={{ marginTop: '20px' }}>
+
+
+        </div>
 
       </div>
     </div>
